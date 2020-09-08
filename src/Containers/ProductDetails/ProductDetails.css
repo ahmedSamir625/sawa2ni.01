@@ -1,0 +1,139 @@
+.info-pos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+
+    margin: 5%;
+    /* margin: 0px 5% 0px 5%; */
+    
+}
+
+.display-box{
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    color: rgb(121, 121, 121);
+
+    width:100%;
+    min-width: 530px;
+    box-shadow:0px 0px 10px 2px #eeeeeeaa;
+
+    margin-bottom: 20px;
+}
+
+.name{
+    font-size: 30px;
+    color: #8b8b8b;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.price{
+    font-size: 25px;
+    color: #1ba000;
+    font-weight: 500;
+    padding-bottom: 20px;
+    padding-top: 10px;
+
+}
+
+.headline{
+    font-size: 20px;
+    color: #9e734b;
+    font-weight: 400; 
+}
+
+.main-info-pos{
+    display: flex;
+    /* flex-direction: row; */
+    /* align-content: flex-start; */
+    align-items: flex-start ;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+}
+
+
+.add-to-cart-btn{
+    background-color: #ff9900;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+
+    padding: 10px;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    min-width: 100px;
+    justify-content: center;
+
+    /* align-self: center; */
+    
+}
+
+.add-to-cart-btn:hover{
+    cursor: pointer;
+}
+
+.add-to-cart-btn:active{
+    transition:  350ms;
+    transform: scale(0.94, 0.94);
+    background-color: tomato;
+}
+
+.outer-prog{
+    width: 100px;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c5c5c5;
+    height: 24px;
+    margin: 3px;
+    padding: 0px;
+    background-color: rgb(231, 231, 231);
+    /* box-shadow: -1px -1px 3px 1px #666; */
+
+}
+
+.inner-prog{
+    background: rgb(255,141,0);
+    background: linear-gradient(0deg, rgb(255, 157, 36) 0%, rgb(255, 210, 86) 100%);
+    width: 0%;
+    height: 22px;
+
+    border-radius: 2px;
+    border-style: solid;
+    border-color: rgba(149, 149, 149, 0.322);
+    border-width: 1px;
+    /* box-shadow: 0px 0px 2px 0px rgb(197, 197, 197); */
+
+}
+
+.rate-circle{
+    height: 70px;
+    width: 70px;
+    border-style: solid;
+    border-radius: 100%;
+    border-width: 1px;
+    border-color: #cccccc;
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rate-label{
+    font-size: 14px;
+    color: #666;
+    margin-left: 5px;
+    margin-right: 5px;
+}

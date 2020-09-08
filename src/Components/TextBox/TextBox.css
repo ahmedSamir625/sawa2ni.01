@@ -1,0 +1,69 @@
+
+
+  
+.textbox-style{
+    height: 12%;
+    min-height: 80px;
+    padding: 0px 10px 0px 10px;
+    
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px 4px rgb(255, 123, 0);
+
+    border-radius: 10px;
+
+    position: fixed;
+    bottom: 5%;
+    right: 17%;
+    left: 25%;
+
+    min-width: 250px;
+    
+
+} 
+
+.cat-input-style{
+    width:100%;
+    height: 40px;
+    min-height: 10px;
+    padding: 10px;
+    border-style: none;
+    /* border-width: 1px; */
+    border-radius: 15px;
+    background-color: rgb(224, 224, 224);
+    color: rgb(57, 56, 65);      
+    outline: none;
+    resize: none;
+    /* min-width: 100px; */
+    
+    
+    overflow: auto;
+}
+
+.add-cat-btn{
+    border-radius: 15px;
+    border-style: none;
+
+    min-width: 60px;
+    background-image: linear-gradient(39deg, rgb(238, 111, 6)0%, rgb(190, 17, 17) 100%);
+
+    color:  rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 7px 5px 7px 5px;
+    margin: 0px 20px 0px 20px;
+    outline: none;
+}
+  
+.add-cat-btn:active{
+    transition:  350ms;
+    transform: scale(0.94, 0.94);
+ }
+
+.center{  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+

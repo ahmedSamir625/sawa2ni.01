@@ -1,0 +1,54 @@
+.root{
+  /* box-shadow: 10px 22px 27px 24px rgb(59, 12, 12); */
+    width: 260px;
+
+    margin: 10px 5px 0px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+
+  }
+
+  .root:hover{
+    transform: scale(1.04, 1.04);
+    box-shadow: 1px 1px 15px 0px #8383838a;
+    transition:  250ms;
+
+  }
+
+  .media {
+    height: 0;
+    padding-top: 56.25%;
+  }
+
+ 
+  .avtr{
+    height: 40px;
+    width: 40px;
+
+    max-height: 40px;
+    max-width: 40px;
+
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+
+    background-color: rgb(185, 185, 185);
+    border-radius: 100%;
+
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+  .hdr {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* margin: 5px 10px 5px 10px; */
+    margin: 8px;
+  }

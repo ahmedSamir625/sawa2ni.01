@@ -1,0 +1,21 @@
+.overview{
+
+    border-radius: 5px;
+    /* width: 100%; */
+    padding: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 2px 1px rgb(224, 224, 224);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* align-items: flex-start; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.overview-img{
+    width: auto;
+    height: 70px;
+    border-radius: 5px;
+    margin-right: 10px;
+}

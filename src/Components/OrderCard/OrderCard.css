@@ -1,0 +1,77 @@
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.uoc-style{
+    padding:20px 50px 20px 50px ;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px #ddd;
+    width: 80%;
+    min-width: 400px;
+    max-width: 1000px;
+    margin-bottom: 15px;
+
+}
+
+.show-more{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    color: #888888;
+}
+
+.show-more-text{
+    font-size: 12;
+    color: #888888;
+    display: flex;
+    align-items: center;
+}
+
+.next-btn{
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    margin: 5px;
+    padding: 7px 10px 7px 10px;
+    background-color: tomato;
+    border-style: none;
+    width: 70px;
+
+}
+
+.next-btn:hover{
+    background-color:rgb(255, 77, 45);
+    cursor: pointer;
+}
+
+.next-btn:active{
+    transition:  350ms;
+    transform: scale(0.9, 0.9);
+ }
+
+ .back-btn{
+    outline: none;
+    border-radius: 5px;
+    color: tomato;
+    margin: 5px;
+    padding: 7px 10px 7px 10px;
+    background-color: rgba(226, 226, 226, 0.767);
+    border-style: none;
+    width: 70px;
+}
+
+.back-btn:hover{
+    background-color:rgba(195, 195, 195, 0.767);
+    cursor: pointer;
+}
+
+.back-btn:active{
+    transition:  350ms;
+    transform: scale(0.9, 0.9);
+ }
+

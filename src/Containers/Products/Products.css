@@ -1,0 +1,26 @@
+
+.page-btn{
+    background-color: white;
+    color: #888888;
+    border-style: none;
+    border-color: #cccccc;
+    padding: 5px;
+    outline: none;
+    border-radius: 3px;
+    margin: 2px;
+
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+    cursor: pointer;
+
+}
+
+
+.page-btn-container{
+    /* box-shadow: 1px 1px 1px 1px #cccccc; */
+    margin: 55px 10% 15px 10%;
+
+    /* width: fit-content; */
+
+}

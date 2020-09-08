@@ -1,0 +1,17 @@
+.cat-item{
+    padding: 10px 30px 10px 30px;
+    margin: 20px 10% 20px 10%;
+    background-color: white;
+
+    box-shadow: 1px 1px 7px 1px rgba(128, 128, 128, 0.589);
+
+    border-radius: 10px;
+    height: 70px;
+    font-size: 17px;
+
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100px;
+}
