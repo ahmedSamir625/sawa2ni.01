@@ -6,7 +6,6 @@ import StepLabel from '@material-ui/core/StepLabel';
 
 import {server} from '../../Constants';
 import './OrderCard.css'
-import '../../Containers/OrderDetailsForm/OrderDetailsForm.css'
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 

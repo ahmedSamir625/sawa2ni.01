@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './ImagePicker.css'
+import addimage from './addimage.png'
 
 
 const ImagePicker = (props) => {
@@ -29,7 +30,8 @@ const ImagePicker = (props) => {
         <div>
             <div className="imgs container">
                 {imgs.length === 0
-                    ? <img height="100%" width="100%" src="https://cdn1.iconfinder.com/data/icons/photo-18/512/Untitled-126-512.png" alt="" />
+                    // ? <img height="100%" width="100%" src="https://cdn1.iconfinder.com/data/icons/photo-18/512/Untitled-126-512.png" alt="" />
+                    ? <img height="100%" width="100%" src={addimage} alt="" />
                     : imgs.map(img => (
                         <img className="img-style" src={img} key={img} alt="img" />
                     ))

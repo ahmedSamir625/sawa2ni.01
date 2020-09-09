@@ -4,7 +4,7 @@ import MyCartCard from '../../Components/MyCartCard/MyCartCard'
 import { Link } from 'react-router-dom'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {server} from '../../Constants';
-
+import cartEmpty from './cartEmpty.png'
 import './MyCart.css'
 
 
@@ -133,7 +133,7 @@ const MyCart = () => {
                             </div>
                             : <div className="center-pos" style={{ minHeight: '70vh' }}>
                                 <img style={{ marginBottom: '20px', width: '250px', height: 'auto' }}
-                                    src="https://www.babymumz.com/resources/assets/front/img/cartEmpty.png" />
+                                    src={cartEmpty}/>
                                 <h2 style={{ color: '#ccc' }}>Your Cart is Empty !</h2>
 
                             </div>

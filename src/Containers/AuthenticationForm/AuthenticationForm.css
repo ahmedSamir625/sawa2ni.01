@@ -7,9 +7,7 @@
     height: 100%;
   
     background-image:linear-gradient(rgba(255, 120, 9, 0.835),rgba(209, 100, 100, 0.897));
-    /* background-image:linear-gradient(rgba(255, 120, 9, 0.835),rgba(209, 100, 100, 0.897)),url('https://thumbs.dreamstime.com/z/background-line-shopping-icons-seamless-vector-simple-black-isolated-white-141638931.jpg'); */
     background-position: center;
-     /* object-fit: fill; */
     background-size: cover; 
     position: fixed;
  

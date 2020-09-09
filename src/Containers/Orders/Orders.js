@@ -6,6 +6,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { UserContext } from '../../Providers/UserContext'
 
 import {server} from '../../Constants'
+import purchaseOrder from './purchaseOrder.png'
 import './Orders.css'
 
 
@@ -115,7 +116,7 @@ const Orders = () => {
                                     <OrderCard key={order._id} order={order} isAdmin={user.admin} />
                                 ))
                                 : <div className="center-pos" style={{ minHeight: '70vh' }}>
-                                    < img src="https://img.icons8.com/bubbles/2x/purchase-order.png"
+                                    < img src={purchaseOrder}
                                     />
                                     <h2 style={{ color: '#ccc' }}>No Orders yet!</h2>
                                 </div>
