@@ -111,6 +111,8 @@ const AuthForm = ({ getUser }) => {
 
         event.preventDefault()
         setActionBtnClicked(true)
+        document.getElementById('action-btn').disabled = true
+
 
         if (password === confirmPassword) {
 
@@ -138,7 +140,7 @@ const AuthForm = ({ getUser }) => {
                     else {
                         setActionBtnClicked(false)
                         document.getElementById('action-btn').disabled = false
-                        alert('Wrong Email or Password')
+                        alert('Email Already Exists !')
                     }
 
                 })
@@ -154,6 +156,7 @@ const AuthForm = ({ getUser }) => {
         else {
             alert('password is not the same')
             setConfirmPassword('')
+            setActionBtnClicked(false)
             setPassword('')
         }
 
@@ -193,7 +196,7 @@ const AuthForm = ({ getUser }) => {
                                 readOnly value='+20'
                             />
                             <input onChange={onPhoneChange} style={{ width: '85%' }}
-                                type="number" id="phone-number" name="phone" className="input" required />
+                                type="text" id="phone-number" name="phone" className="input" required />
                         </div>
                     </div>
 
@@ -225,7 +228,7 @@ const AuthForm = ({ getUser }) => {
                     type="submit"
                     style={{ opacity: actionBtnClicked && '0.6' }}
                 >{
-                        actionBtnClicked ? (action === 'REGISTER' ? 'REGESTERING...' : 'SIGNING IN...') : action
+                        actionBtnClicked ? (action === 'REGISTER' ? 'REGISTERING...' : 'SIGNING IN...') : action
                     }</button>
 
                 {
