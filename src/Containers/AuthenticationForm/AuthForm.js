@@ -2,7 +2,8 @@ import React, { useState, useContext } from 'react'
 import './AuthenticationForm.css'
 import Cookies from 'js-cookie'
 import { UserContext } from '../../Providers/UserContext'
-import {server} from '../../Constants';
+import { server } from '../../Constants';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 const AuthForm = ({ getUser }) => {
@@ -14,6 +15,7 @@ const AuthForm = ({ getUser }) => {
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const [, setUser] = useContext(UserContext)
+    const [actionBtnClicked, setActionBtnClicked] = useState(false)
 
     const [name, setName] = useState({
         firstName: '',
@@ -27,9 +29,6 @@ const AuthForm = ({ getUser }) => {
 
 
     const toggleAction = () => {
-        // action === 'SIGNIN'
-        //     ? .setState({ action: 'REGISTER', toggle: 'Signin' })
-        //     : .setState({ action: 'SIGNIN', toggle: 'Register' })
 
         if (action === 'SIGNIN') {
             setAction('REGISTER')
@@ -75,6 +74,8 @@ const AuthForm = ({ getUser }) => {
 
     const onActionSignin = (event) => {
         event.preventDefault()
+        setActionBtnClicked(true)
+        document.getElementById('action-btn').disabled = true
 
         fetch(`${server}signin`, {
             method: 'post',
@@ -93,16 +94,23 @@ const AuthForm = ({ getUser }) => {
                     getUser(_user)
                 }
                 else {
+                    setActionBtnClicked(false)
+                    document.getElementById('action-btn').disabled = false
                     alert('Wrong Email or Password');
                 }
             })
-            .catch(() => alert('Something went Wrong!'))
+            .catch(() => {
+                document.getElementById('action-btn').disabled = false
+                setActionBtnClicked(false)
+                alert('Something went Wrong!')
+            })
     }
 
     const onActionRegister = (event) => {
 
 
         event.preventDefault()
+        setActionBtnClicked(true)
 
         if (password === confirmPassword) {
 
@@ -128,12 +136,18 @@ const AuthForm = ({ getUser }) => {
                     }
 
                     else {
+                        setActionBtnClicked(false)
+                        document.getElementById('action-btn').disabled = false
                         alert('Wrong Email or Password')
                     }
 
                 })
-                .catch(() =>
+                .catch(() => {
+                    setActionBtnClicked(false)
+                    document.getElementById('action-btn').disabled = false
                     alert('something went wrong')
+                }
+
                 )
         }
 
@@ -179,7 +193,7 @@ const AuthForm = ({ getUser }) => {
                                 readOnly value='+20'
                             />
                             <input onChange={onPhoneChange} style={{ width: '85%' }}
-                                type="text" id="phone-number" name="phone" className="input" required />
+                                type="number" id="phone-number" name="phone" className="input" required />
                         </div>
                     </div>
 
@@ -206,11 +220,19 @@ const AuthForm = ({ getUser }) => {
                 }
 
                 <button
+                    id="action-btn"
                     className="button"
                     type="submit"
-                >{action}</button>
+                    style={{ opacity: actionBtnClicked && '0.6' }}
+                >{
+                        actionBtnClicked ? (action === 'REGISTER' ? 'REGESTERING...' : 'SIGNING IN...') : action
+                    }</button>
 
-                <label className="toggle-btn" onClick={toggleAction} >{toggle}</label>
+                {
+                    actionBtnClicked
+                        ? <CircularProgress size='20px' disableShrink style={{ color: '#ff6600', margin: '10px 0px 0px 0px' }} />
+                        : <label className="toggle-btn" onClick={toggleAction} >{toggle}</label>
+                }
                 <br />
             </form>
         </div>

@@ -3,7 +3,7 @@ import './App.css';
 import AuthForm from './Containers/AuthenticationForm/AuthForm';
 import Cookies from 'js-cookie'
 import CircularProgress from '@material-ui/core/CircularProgress';
-
+import {server} from './Constants'
 
 import MiniDrawer from './Components/Drawer/Drawer'
 import { UserProvider } from './Providers/UserContext'
@@ -18,7 +18,7 @@ function App() {
     const loggedUserCookies = Cookies.getJSON('loggedUser');
     if (loggedUserCookies) {
 
-      fetch('https://serene-shelf-78557.herokuapp.com/getUser', {
+      fetch(`${server}getUser`, {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: loggedUserCookies.userid })
