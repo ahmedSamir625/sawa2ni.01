@@ -60,7 +60,8 @@ const Orders = () => {
     }, [user])
 
     useEffect(() => {
-        setLoading(true)
+      if(user.admin){
+            setLoading(true)
         fetch(`${server}getOrders`)
             .then(response => response.json())
             .then(data => {
@@ -87,6 +88,7 @@ const Orders = () => {
                 alert('Something went wrong!')
             })
 
+      }
 
 
 
